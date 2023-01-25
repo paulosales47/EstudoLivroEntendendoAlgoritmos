@@ -1,7 +1,4 @@
-
-
 import math
-
 
 def pesquisa_binaria(lista, item):
     baixo = 0;
@@ -21,7 +18,6 @@ def pesquisa_binaria(lista, item):
         else:
             baixo = meio + 1
     return None
-
 
 minha_lista = list(range(0,8192))
 print(pesquisa_binaria(minha_lista, 1023))
