@@ -51,26 +51,38 @@ def buscarCaminhoMenorCusto():
         nodo = procurarVerticeMenorCusto()
 
 
+def exibeMenorCaminhoGrafo():
+    caminho = ['inicio']
+    ultimo_nodo = caminho[0]
 
+    while ultimo_nodo != 'fim':
+        for nodo in pais.keys():
+            if pais[nodo] == ultimo_nodo and nodo not in caminho:
+                caminho.append(nodo)
+                ultimo_nodo = nodo
 
-print('--------------------------')
-print('ANTES')
-print('--------------------------')
-print(grafo.keys())
-print('--------------------------')
-print(pais.keys())
-print(pais.values())
-print('--------------------------')
-print(custos.keys())
-print(custos.values())
+    return caminho
+
+# print('--------------------------')
+# print('ANTES')
+# print('--------------------------')
+# print(grafo.keys())
+# print('--------------------------')
+# print(pais.keys())
+# print(pais.values())
+# print('--------------------------')
+# print(custos.keys())
+# print(custos.values())
 buscarCaminhoMenorCusto()
-print('--------------------------')
-print('DEPOIS')
-print('--------------------------')
-print(grafo.keys())
-print('--------------------------')
-print(pais.keys())
-print(pais.values())
-print('--------------------------')
-print(custos.keys())
-print(custos.values())
+# print('--------------------------')
+# print('DEPOIS')
+# print('--------------------------')
+# print(grafo.keys())
+# print('--------------------------')
+# print(pais.keys())
+# print(pais.values())
+# print('--------------------------')
+# print(custos.keys())
+# print(custos.values())
+print(exibeMenorCaminhoGrafo())
+print(pais.get('inicio'))
